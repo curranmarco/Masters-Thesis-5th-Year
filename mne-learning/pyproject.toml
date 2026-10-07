@@ -1,0 +1,32 @@
+[project]
+name = "mne-learning"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "curranmarco", email = "curranmarco@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=7.4.0",
+    "matplotlib>=3.11.2",
+    "mne-bids>=0.20.0",
+    "mne-qt-browser>=0.7.5",
+    "mne[hdf5]>=1.13.2",
+    "pandas>=3.0.6",
+    "pybv>=0.8.1",
+    "pyqt6>=6.11.0",
+    "scikit-learn>=1.9.1",
+]
+
+[project.scripts]
+mne-learning = "mne_learning:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.workspace]
+members = [
+    "mne-learning",
+]
